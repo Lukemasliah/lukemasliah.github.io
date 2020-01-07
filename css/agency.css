@@ -27,22 +27,7 @@ p {
 p.large {
   font-size: 16px;
 }
-a,
-a:hover,
-a:focus,
-a:active,
-a.active {
-  outline: none;
-}
-a {
-  color: #19828A;
-}
-a:hover,
-a:focus,
-a:active,
-a.active {
-  color: #fec503;
-}
+
 h1,
 h2,
 h3,
@@ -156,57 +141,6 @@ fieldset[disabled] .btn-xl.active {
   color: #fed136;
   background-color: white;
 }
-.navbar-custom {
-  background-color: #222222;
-  border-color: transparent;
-}
-.navbar-custom .navbar-brand {
-  color: white;
-  font-family: "Roboto", Helvetica, Arial, cursive;
-  padding-top: 20px;
-}
-.navbar-custom .navbar-brand:hover,
-.navbar-custom .navbar-brand:focus,
-.navbar-custom .navbar-brand:active,
-.navbar-custom .navbar-brand.active {
-  color: #19828A;
-}
-.navbar-custom .navbar-collapse {
-  border-color: rgba(255, 255, 255, 0.02);
-}
-.navbar-custom .navbar-toggle {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  color: white;
-  font-size: 16px;
-  padding: 10px 15px;
-}
-.navbar-custom .navbar-toggle:hover,
-.navbar-custom .navbar-toggle:focus {
-  background-color: #19828A;
-}
-.navbar-custom .nav li a {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 1px;
-  color: white;
-}
-.navbar-custom .nav li a:hover,
-.navbar-custom .nav li a:focus {
-  color: #19828A;
-  outline: none;
-}
-.navbar-custom .navbar-nav > .active > a {
-  border-radius: 0;
-  color: white;
-  background-color: #19828A;
-}
-.navbar-custom .navbar-nav > .active > a:hover,
-.navbar-custom .navbar-nav > .active > a:focus {
-  color: white;
-  background-color: #19828A;
-}
 .submit-button {
   color: white;
   background-color: #0D464A;
@@ -267,10 +201,6 @@ header {
     padding-top: 50px;
     justify-content: center;
     text-align: center;
-  }
-  .about-me-align {
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 section {
@@ -356,12 +286,13 @@ section#contact :-ms-input-placeholder {
 section#contact .text-danger {
   color: #D6BD1C;
 }
+footer {
+  background-color: #212529;
+}
 footer .footer-content {
   padding: 20px;
   text-align: center;
   background-color: #212529;
-  margin: 0;
-  width: 100%;
 }
 footer span.copyright {
   color: white;
@@ -385,6 +316,17 @@ footer span.copyright {
 .social-buttons a:active {
   background-color: #19828A;
 }
+nav.navbar li {
+  padding-left: 30px;
+}
+nav.navbar a {
+  color: #3CCCD6;
+}
+nav.navbar a:hover {
+  color: #D6BD1C;
+  text-decoration: none;
+}
+
 .btn:focus,
 .btn:active,
 .btn.active,
@@ -393,12 +335,11 @@ footer span.copyright {
 }
 .about-me-img {
   border-radius: 50%;
-  height: 390px;
-  width: 390px;
-  border-style: solid;
-  border-color: #19828A;
-  border-width: 10px;
+  max-height: 390px;
+  max-width: 390px;
   box-shadow: 0px 6px 10px grey;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .about-me-list {
   list-style-type: none;
@@ -440,32 +381,8 @@ body {
 }
 
 @media (min-width: 768px) {
-  .navbar-custom {
-    background-color: transparent;
-    padding: 25px 0;
-    -webkit-transition: padding 0.3s;
-    -moz-transition: padding 0.3s;
-    transition: padding 0.3s;
-    border: none;
-  }
   .text-muted {
     padding: 20px;
-  }
-  .navbar-custom .navbar-brand {
-    font-size: 2em;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-  .navbar-custom .navbar-nav > .active > a {
-    border-radius: 3px;
-  }
-  .navbar-custom.affix {
-  background-color: #222222;
-  padding: 10px 0;
-  }
-  .navbar-custom.affix .navbar-brand {
-    font-size: 1.5em;
   }
   header .intro-text {
   padding-top: 10px;
@@ -475,6 +392,10 @@ body {
   header {
     background-position: center center;
   }
+  .about-me-img {
+    width: 350px;
+    height: 350px;
+  }
 }
 
 @media (min-width: 990px) {
@@ -483,6 +404,10 @@ body {
   }
   .about-me-list li {
     text-align: left;
+  }
+  .about-me-img {
+    width: 390px;
+    height: 390px;
   }
   header {
     background-position: 60% 50%;
@@ -597,7 +522,7 @@ body {
 
 @media (min-height: 810px) {
   header {
-    padding-top: 200px;
+    padding-top: 250px;
     margin-top: 150px;
   }
   header .intro-text {
